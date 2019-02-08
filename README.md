@@ -7,7 +7,7 @@ mysql-server
 mysql-client
 
 * GEMs utilizadas
-gem rails 5.2
+gem rails 5.2 
 gem mysql2, ~> 0.4.10
 gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 gem 'rspec-rails'
@@ -36,6 +36,7 @@ application.rb
     
 * Database creation
 rake db:create
+rakd db:migrate
 rake db:seed
 
 * Database initialization
