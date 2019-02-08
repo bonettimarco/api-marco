@@ -35,6 +35,7 @@ application.rb
     
 * Database creation
 rake db:create
+rakd db:seed
 
 * Database initialization
 setar o arquivo Database.yml
@@ -67,6 +68,14 @@ rspec
 * Services (job queues, cache servers, search engines, etc.)
 rake db:seed
 
-* Deployment instructions
+* Instruções de uso
 
-* ...
+* Controladora que devolve evento por nome deve ser acionada com:
+http://url:3000/retorna_eventos?nome=My
+http://url:3000/retorna_eventos?nome=Palestra
+
+* Controladora que cria comentários, recebe como parâmetros text, user_id e event_id
+http://url:3000/comments?text=nhonhonho&user_id=1&event_id=1
+
+* Controladora que devolve os comentários que possuem algum report
+http://url:3000/comments?report=true
