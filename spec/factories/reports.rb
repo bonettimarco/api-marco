@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :report do
-    user User.last
-    comment Comment.last
+    user { create(:user) }
+    comment { create(:comment) }
   end
 end

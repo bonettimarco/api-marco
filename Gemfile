@@ -34,12 +34,16 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # rspec
   gem 'rspec-rails'
-  gem 'factory_bot'
-  gem 'factory_bot_rails'
+  gem 'factory_bot', '~> 4.11.1'
+  gem 'factory_bot_rails', '~> 4.11.1'
 end
 
 group :test do
   gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.1.2', require: false
+  gem 'rails-controller-testing'
+  gem 'rspec-json_expectations'
+  gem 'json_matchers'
 end
 
 group :development do

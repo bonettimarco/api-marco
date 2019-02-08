@@ -5,19 +5,20 @@
 * System dependencies
 mysql-server 
 mysql-client
+
+* GEMs utilizadas
 gem rails 5.2
 gem mysql2, ~> 0.4.10
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # rspec
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
-end
-
-group :test do
-  gem 'database_cleaner'
-end
+gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+gem 'rspec-rails'
+gem 'database_cleaner'
+gem 'has_scope'
+gem 'factory_bot', '~> 4.11.1'
+gem 'factory_bot_rails', '~> 4.11.1'
+gem 'shoulda-matchers', '~> 3.1.2', require: false
+gem 'rails-controller-testing'
+gem 'rspec-json_expectations'
+gem 'json_matchers'
 
 
 * Configuration
@@ -35,7 +36,7 @@ application.rb
     
 * Database creation
 rake db:create
-rakd db:seed
+rake db:seed
 
 * Database initialization
 setar o arquivo Database.yml
@@ -54,28 +55,27 @@ test: &test
   username: root
   password: 
 
-production:
-  adapter: mysql2
-  encoding: utf8
-  database: ###IP_PRODUCAO###
-  username: ###USUARIO_PRODUCAO###
-  password: ###SENHA_PRODUCAO###
-  host:
-
 * How to run the test suite
 rspec
+Três testes de model
+Três testes de request
 
 * Services (job queues, cache servers, search engines, etc.)
 rake db:seed
 
 * Instruções de uso
+gitclone https://github.com/bonettimarco/api-marco
+bundle
+rake db:create db:migrate db:seed
+rails s
 
 * Controladora que devolve evento por nome deve ser acionada com:
-http://url:3000/retorna_eventos?nome=My
-http://url:3000/retorna_eventos?nome=Palestra
+http://localhost:3000/retorna_eventos?nome=My
+http://localhost:3000/retorna_eventos?nome=Palestra
 
 * Controladora que cria comentários, recebe como parâmetros text, user_id e event_id
 http://url:3000/comments?text=nhonhonho&user_id=1&event_id=1
 
 * Controladora que devolve os comentários que possuem algum report
 http://url:3000/comments?report=true
+

@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :comment do
-    text "MyString"
-    user nil
-    event nil
+    sequence(:text) {|n| "MyString#{n}"}
+    user { create(:user) }
+    event { create(:event) }
   end
 end

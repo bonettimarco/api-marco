@@ -28,6 +28,7 @@ class CommentsController < ApplicationController
   # cria comentários
   def cria parametros
     @comment = Comment.new(parametros)
+    debugger
     if @comment.save
       render json: @comment, status: :created, location: @comment
     else
