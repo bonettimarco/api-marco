@@ -1,0 +1,23 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: api
+  username: root
+  password: tttzzz
+
+test: &test
+  adapter: mysql2
+  encoding: utf8
+  host: mysql-test
+  database: api_test
+  username: root
+  password: tttzzz
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: ###IP_PRODUCAO###
+  username: ###USUARIO_PRODUCAO###
+  password: ###SENHA_PRODUCAO###
+  host:
+
