@@ -5,3 +5,4 @@ FactoryBot.define do
     password "MyString"
   end
 end
+

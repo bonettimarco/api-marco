@@ -5,13 +5,14 @@ development:
   username: root
   password: tttzzz
 
-test: &test
+test:
   adapter: mysql2
   encoding: utf8
-  host: mysql-test
+#  host: mysql-test
   database: api_test
   username: root
   password: tttzzz
+#  socket: /tmp/mysql.sock
 
 production:
   adapter: mysql2
