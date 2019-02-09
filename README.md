@@ -73,6 +73,8 @@ rails s
 * Controladora que devolve evento por nome deve ser acionada com:
 http://localhost:3000/retorna_eventos?nome=My
 http://localhost:3000/retorna_eventos?nome=Palestra
+sem consulta
+http://localhost:3000/retorna_eventos
 
 * Controladora que cria comentários, recebe como parâmetros text, user_id e event_id
 http://url:3000/comments?text=nhonhonho&user_id=1&event_id=1
@@ -80,3 +82,5 @@ http://url:3000/comments?text=nhonhonho&user_id=1&event_id=1
 * Controladora que devolve os comentários que possuem algum report
 http://url:3000/comments?report=true
 
+todos comentários
+http://url:3000/comments
