@@ -3,8 +3,8 @@ FactoryBot.define do
     sequence :name do |n|
       "MyString #{n}"
     end
-    email "MyString"
-    password "MyString"
+    email { "MyString" }
+    password { "MyString" }
   end
 end
 
