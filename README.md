@@ -8,8 +8,8 @@ mysql-client
 
 * GEMs utilizadas
 
-gem rails 5.2 <br>
-gem mysql2, ~> 0.4.10<br>
+gem 'rails', '5.2' <br>
+gem 'mysql2', '~> 0.4.10'<br>
 gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]<br>
 gem 'rspec-rails'<br>
 gem 'database_cleaner'<br>
